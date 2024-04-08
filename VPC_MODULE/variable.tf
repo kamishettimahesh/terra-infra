@@ -1,108 +1,108 @@
 variable "cidr_block" {
-    type = string
+  type    = string
   default = "10.0.0.0/16"
 }
 
 variable "enable_dns_hostnames" {
-    type = bool
-    default = true
-  
+  type    = bool
+  default = true
+
 }
 
 variable "common_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "vpc_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "project_name" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "environment_name" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "igw_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "public_subnet_cidr" {
-    validation {
-      condition = length(var.public_subnet_cidr) ==2
-      error_message = "please give 2 valid subnet CIDR"
-    }
-  
+  validation {
+    condition     = length(var.public_subnet_cidr) == 2
+    error_message = "please give 2 valid subnet CIDR"
+  }
+
 }
 
 variable "public_subnet_tags" {
-    default = {}
-  
+  default = {}
+
 }
 variable "private_subnet_cidr" {
-    validation {
-      condition = length(var.private_subnet_cidr) ==2
-      error_message = "please give 2 valid subnet CIDR"
-    }
-  
+  validation {
+    condition     = length(var.private_subnet_cidr) == 2
+    error_message = "please give 2 valid subnet CIDR"
+  }
+
 }
 
 variable "private_subnet_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "database_subnet_cidr" {
-    validation {
-      condition = length(var.database_subnet_cidr) ==2
-      error_message = "please give 2 valid subnet CIDR"
-    }
-  
+  validation {
+    condition     = length(var.database_subnet_cidr) == 2
+    error_message = "please give 2 valid subnet CIDR"
+  }
+
 }
 
 variable "database_subnet_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "eip_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "nat_gateway_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "public_route_tabel_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "private_route_tabel_tags" {
-    default = {}
-  
+  default = {}
+
 }
 variable "database_route_tabel_tags" {
-    default = {}
-  
+  default = {}
+
 }
 
 variable "is_peering_required" {
-    default = false
-  
+  default = false
+
 }
 
 variable "acceptor_vpc_id" {
-     type = string
-     default = "value"
-  
+  type    = string
+  default = "value"
+
 }
